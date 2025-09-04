@@ -1,3 +1,15 @@
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: your-app-service
+# spec:
+#   selector:
+#     app: your-app
+#   ports:
+#     - protocol: TCP
+#       port: 8085
+#       targetPort: 3000
+#   type: LoadBalancer
 apiVersion: v1
 kind: Service
 metadata:
@@ -7,6 +19,7 @@ spec:
     app: your-app
   ports:
     - protocol: TCP
-      port: 80
+      port: 8085
       targetPort: 3000
-  type: LoadBalancer
+      nodePort: 30085
+  type: NodePort
