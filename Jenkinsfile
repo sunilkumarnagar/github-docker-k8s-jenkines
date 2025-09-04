@@ -2,14 +2,14 @@ pipeline {
   agent any
 
   environment {
-    DOCKER_IMAGE = 'your-dockerhub-username/your-app:latest'
+    DOCKER_IMAGE = 'sunilkumarnagar9929/springapp:dockertest'
     KUBE_CONFIG = credentials('kubeconfig-credentials-id') // Optional: if using Jenkins credentials
   }
 
   stages {
     stage('Clone Repository') {
       steps {
-        git 'https://github.com/your-username/your-repo.git'
+        git 'https://github.com/sunilkumarnagar/github-docker-k8s-jenkines.git'
       }
     }
 
