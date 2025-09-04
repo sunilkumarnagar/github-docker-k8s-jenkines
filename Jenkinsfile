@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKER_IMAGE = 'sunilkumarnagar9929/dockertest:latest'
+    DOCKER_IMAGE = 'sunilkumarnagar9929/dockertest'
     // KUBE_CONFIG = credentials('kubeconfig-credentials-id') // Optional: if using Jenkins credentials
   }
 
