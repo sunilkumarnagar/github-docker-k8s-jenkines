@@ -13,12 +13,12 @@ pipeline {
       }
     }
     
-    stage('Fatch') {
+    stage('Build Java Project') {
       steps {
-        echo "Fatch from git"
+        bat 'mvn clean package'
       }
     }
-  
+
     stage('Build Docker Image') {
       steps {
         bat 'docker build -t %DOCKER_IMAGE% .'
