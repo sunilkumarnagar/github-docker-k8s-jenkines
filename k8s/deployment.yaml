@@ -16,4 +16,4 @@ spec:
       - name: your-app
         image: sunilkumarnagar9929/dockertest:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 8080
